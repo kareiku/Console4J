@@ -6,7 +6,7 @@
 
     <groupId>io.github.kareiku</groupId>
     <artifactId>Console4J</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 
     <name>Console4J</name>
     <url>https://github.com/kareiku/Console4J</url>
