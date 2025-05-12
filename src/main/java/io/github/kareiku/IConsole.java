@@ -3,11 +3,7 @@ package io.github.kareiku;
 import org.jetbrains.annotations.NotNull;
 
 public interface IConsole {
-    @NotNull String read();
+    @NotNull String readLine(@NotNull String fmt, @NotNull Object... args);
 
-    void print(@NotNull Object... args);
-
-    void println(@NotNull Object... args);
-
-    void error(@NotNull Object... args);
+    void printf(@NotNull String fmt, @NotNull Object... args);
 }
