@@ -1,11 +1,11 @@
 # Console4J
 
-A simple console for printing information and errors in Java, using standard or custom print streams.
+Simplified re-implementation of java.io.Console, for systems that might not have an associated console.
 
 ## Table of Contents
 
-- **IConsole**: Interface that represents the basics that a console should have.
-- **Console**: The default console object. Generic implementation that uses stdin for reading and stdout and stderr for writing.
+- **IConsole**: The representation of a console.
+- **Console**: The console object.
 
 ## Features
 
