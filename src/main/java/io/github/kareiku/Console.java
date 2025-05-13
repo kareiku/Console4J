@@ -1,6 +1,7 @@
 package io.github.kareiku;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.InputStream;
 import java.io.PrintStream;
@@ -20,7 +21,7 @@ public class Console implements IConsole {
     }
 
     @Override
-    public @NotNull String readLine(@NotNull String fmt, @NotNull Object... args) {
+    public @NotNull String readLine(@NotNull String fmt, @NotNull Object @Nullable ... args) {
         String line;
         synchronized (this.writeLock) {
             synchronized (this.readLock) {
@@ -34,7 +35,7 @@ public class Console implements IConsole {
     }
 
     @Override
-    public void printf(@NotNull String fmt, @NotNull Object... args) {
+    public void printf(@NotNull String fmt, @NotNull Object @Nullable ... args) {
         this.out.printf(fmt, args);
     }
 }
