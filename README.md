@@ -5,7 +5,7 @@ Simplified re-implementation of java.io.Console, for systems that might not have
 ## Usage
 
 Compiled versions of the library can be found under the `releases/` directory. This is done to allow ease of download
-without requiring GitHub's GUI.
+without requiring any GUI.
 
 ## License
 
