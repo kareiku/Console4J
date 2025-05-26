@@ -1,8 +1,5 @@
 package io.github.kareiku;
 
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
@@ -13,7 +10,7 @@ public class Console implements IConsole {
     private final Scanner scanner;
     private final PrintStream out;
 
-    public Console(@NotNull InputStream in, @NotNull PrintStream out) {
+    public Console(InputStream in, PrintStream out) {
         this.readLock = new Object();
         this.writeLock = new Object();
         this.scanner = new Scanner(in);
@@ -21,7 +18,12 @@ public class Console implements IConsole {
     }
 
     @Override
-    public @NotNull String readLine(@NotNull String fmt, @NotNull Object @Nullable ... args) {
+    public void printf(String fmt, Object... args) {
+        this.out.printf(fmt, args);
+    }
+
+    @Override
+    public String scanf(String fmt, Object... args) {
         String line;
         synchronized (this.writeLock) {
             synchronized (this.readLock) {
@@ -32,10 +34,5 @@ public class Console implements IConsole {
             }
         }
         return line;
-    }
-
-    @Override
-    public void printf(@NotNull String fmt, @NotNull Object @Nullable ... args) {
-        this.out.printf(fmt, args);
     }
 }
