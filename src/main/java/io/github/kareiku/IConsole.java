@@ -1,10 +1,7 @@
 package io.github.kareiku;
 
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-
 public interface IConsole {
-    @NotNull String readLine(@NotNull String fmt, @NotNull Object @Nullable ... args);
+    void printf(String fmt, Object... args);
 
-    void printf(@NotNull String fmt, @NotNull Object @Nullable ... args);
+    String scanf(String fmt, Object... args);
 }
