@@ -1,11 +1,10 @@
 # Console4J
 
-Simplified re-implementation of java.io.Console, for systems that might not have an associated console.
+A simplified yet synchronized reimplementation of java.io.Console.
 
 ## Usage
 
-Compiled versions of the library can be found under the `releases/` directory. This is done to allow ease of download
-without requiring any GUI.
+Compiled versions of the library can be found under the `releases/` directory.
 
 ## License
 
