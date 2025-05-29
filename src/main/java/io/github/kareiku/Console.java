@@ -23,7 +23,7 @@ public class Console implements IConsole {
     }
 
     @Override
-    public String scanf(String fmt, Object... args) {
+    public String readLine(String fmt, Object... args) {
         String line;
         synchronized (this.writeLock) {
             synchronized (this.readLock) {
